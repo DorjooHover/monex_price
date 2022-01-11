@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -88,7 +89,7 @@ nav .nav_img {
 }
 
 .container {
-  padding: 0 30px;
+  padding: 0 100px;
 }
 
 .container .graphic {
@@ -161,6 +162,27 @@ nav .nav_img {
 
 .container .videos_unit p {
   margin: 10px 0;
+}
+
+.swiper {
+  width: 50%;
+  height: auto;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .titles span {
@@ -242,7 +264,6 @@ nav .nav_img {
 .graphic_price,
 .photo_price,
 .video_price {
-  display: none;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   -webkit-transition: 3s;
@@ -251,25 +272,72 @@ nav .nav_img {
           animation: move 3s all;
 }
 
-@-webkit-keyframes move {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
+.graphic_pop,
+.logo_pop,
+.photo_pop,
+.video_pop {
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  z-index: 5;
+  left: 0;
+  background-color: #2e81cb;
 }
 
-@keyframes move {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
+.graphic_pop .graphic_price,
+.graphic_pop .logo_price,
+.graphic_pop .photo_price,
+.graphic_pop .video_price,
+.logo_pop .graphic_price,
+.logo_pop .logo_price,
+.logo_pop .photo_price,
+.logo_pop .video_price,
+.photo_pop .graphic_price,
+.photo_pop .logo_price,
+.photo_pop .photo_price,
+.photo_pop .video_price,
+.video_pop .graphic_price,
+.video_pop .logo_price,
+.video_pop .photo_price,
+.video_pop .video_price {
+  width: 40%;
+  margin-left: 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.graphic_pop span,
+.logo_pop span,
+.photo_pop span,
+.video_pop span {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.graphic_pop span i,
+.logo_pop span i,
+.photo_pop span i,
+.video_pop span i {
+  font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */
