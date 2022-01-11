@@ -128,9 +128,31 @@ nav {
                }
           }
      }
+     .g_photo {
+          .titles {
+               h3 {
+                    background-color: transparent;
+               }
+          }
+          &s {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               // width: 60%;
+               grid-gap: 20px;
+               margin: 0 auto;
+               &_unit {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    p {
+                         margin: 10px 0;
+                    }
+               }
+          }
+     }
 }
 .swiper {
-     width: 50%;
+     width: 40%;
      height: auto;
 }
 
@@ -206,10 +228,21 @@ nav {
      transition: 3s;
      animation: move 3s all;
 }
+.swiper_main {
+     height: 100vh;
+     width: 100vw;
+     .swiper {
+          .swiper-wrapper {
+               overflow: hidden;
+          }
+     }
+}
 .graphic_pop,
 .logo_pop,
 .photo_pop,
-.video_pop {
+.video_pop,
+.g_photo_pop,
+.main_pop {
      position: absolute;
      display: none;
      width: 100vw;
@@ -219,12 +252,15 @@ nav {
      top: 0;
      z-index: 5;
      left: 0;
+     padding: 0 3%;
      background-color: #2e81cb;
      .graphic_price,
      .logo_price,
      .photo_price,
-     .video_price {
-          width: 40%;
+     .video_price,
+     .g_photo_price,
+     .main_price {
+          width: 50%;
           margin-left: 50px;
           height: 100%;
           display: flex;

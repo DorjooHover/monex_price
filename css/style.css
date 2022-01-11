@@ -164,8 +164,38 @@ nav .nav_img {
   margin: 10px 0;
 }
 
+.container .g_photo .titles h3 {
+  background-color: transparent;
+}
+
+.container .g_photos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+}
+
+.container .g_photos_unit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .g_photos_unit p {
+  margin: 10px 0;
+}
+
 .swiper {
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 
@@ -272,10 +302,21 @@ nav .nav_img {
           animation: move 3s all;
 }
 
+.swiper_main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.swiper_main .swiper .swiper-wrapper {
+  overflow: hidden;
+}
+
 .graphic_pop,
 .logo_pop,
 .photo_pop,
-.video_pop {
+.video_pop,
+.g_photo_pop,
+.main_pop {
   position: absolute;
   display: none;
   width: 100vw;
@@ -289,6 +330,7 @@ nav .nav_img {
   top: 0;
   z-index: 5;
   left: 0;
+  padding: 0 3%;
   background-color: #2e81cb;
 }
 
@@ -296,19 +338,39 @@ nav .nav_img {
 .graphic_pop .logo_price,
 .graphic_pop .photo_price,
 .graphic_pop .video_price,
+.graphic_pop .g_photo_price,
+.graphic_pop .main_price,
 .logo_pop .graphic_price,
 .logo_pop .logo_price,
 .logo_pop .photo_price,
 .logo_pop .video_price,
+.logo_pop .g_photo_price,
+.logo_pop .main_price,
 .photo_pop .graphic_price,
 .photo_pop .logo_price,
 .photo_pop .photo_price,
 .photo_pop .video_price,
+.photo_pop .g_photo_price,
+.photo_pop .main_price,
 .video_pop .graphic_price,
 .video_pop .logo_price,
 .video_pop .photo_price,
-.video_pop .video_price {
-  width: 40%;
+.video_pop .video_price,
+.video_pop .g_photo_price,
+.video_pop .main_price,
+.g_photo_pop .graphic_price,
+.g_photo_pop .logo_price,
+.g_photo_pop .photo_price,
+.g_photo_pop .video_price,
+.g_photo_pop .g_photo_price,
+.g_photo_pop .main_price,
+.main_pop .graphic_price,
+.main_pop .logo_price,
+.main_pop .photo_price,
+.main_pop .video_price,
+.main_pop .g_photo_price,
+.main_pop .main_price {
+  width: 50%;
   margin-left: 50px;
   height: 100%;
   display: -webkit-box;
@@ -326,7 +388,9 @@ nav .nav_img {
 .graphic_pop span,
 .logo_pop span,
 .photo_pop span,
-.video_pop span {
+.video_pop span,
+.g_photo_pop span,
+.main_pop span {
   position: absolute;
   top: 3%;
   right: 3%;
@@ -337,7 +401,9 @@ nav .nav_img {
 .graphic_pop span i,
 .logo_pop span i,
 .photo_pop span i,
-.video_pop span i {
+.video_pop span i,
+.g_photo_pop span i,
+.main_pop span i {
   font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */
