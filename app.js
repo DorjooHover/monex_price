@@ -14,6 +14,7 @@ var g_photo_hide = document.querySelector('.g_photo_popup')
 var main = document.querySelector('.btn_mains')
 var main_view = document.querySelector('.main_pop')
 var main_hide = document.querySelector('.main_popup')
+var main_hide_1 = document.querySelector('.main_popup_1')
 // var video = document.querySelector('.btn_videos')
 // var video_view = document.querySelector('.video_pop')
 // var video_hide = document.querySelector('.video_popup')
@@ -36,6 +37,10 @@ main.addEventListener('click', () => {
      main_view.style.top = `${window.pageYOffset}px`
 })
 main_hide.addEventListener('click', () => {
+     main_view.style.display = 'none'
+     body.style.overflowY = 'auto'
+})
+main_hide_1.addEventListener('click', () => {
      main_view.style.display = 'none'
      body.style.overflowY = 'auto'
 })
